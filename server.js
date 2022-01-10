@@ -15,7 +15,7 @@ mongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUni
       console.log('database Error', err);
     } else {
       console.log('Successfully connected to the database');
-
+      
       const db = client.db('companyDB');
       const app = express();
       
