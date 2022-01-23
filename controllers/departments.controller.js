@@ -53,7 +53,7 @@ exports.putItem = async (req, res) => {
         { _id: req.params.id },
         { $set: { name: name } }
       );
-    const depChanged = await Department.findById(req.params.id)
+      const depChanged = await Department.findById(req.params.id)
       res.json(depChanged);
     } else res.status(404).json({ message: 'Not found...' });
   } catch (err) {
